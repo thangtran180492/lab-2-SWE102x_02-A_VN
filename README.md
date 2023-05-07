@@ -1,7 +1,7 @@
 # lab-2-SWE102x_02-A_VN
 
 # Design Patterns
-Creational Patterns
+# Creational Patterns
 
 Factory Method:
 là một Creational Patterns cung cấp giao diện để tạo các đối tượng trong lớp cha, 
