@@ -1,18 +1,28 @@
 package cp2builder;
 
 /*
- * giải thích :
+ * Mục đích của mẫu thiết kế trình builder là tách 
+ * việc xây dựng một đối tượng phức tạp khỏi biểu diễn của nó. 
  * 
- * Cho phép bạn từng bước xây dựng các đối tượng phức tạp. 
- * Mẫu này cho phép bạn tạo ra các loại và biểu diễn khác nhau 
- * của một đối tượng bằng cách sử dụng cùng một mã xây dựng.
+ * cấu trúc bao gồm
+ * builder          khai báo bước xây dựng chung cho mọi loại builder
+ * Concrete builder cung câp triển khai khai khác nhau của các bước xây dựng
+ * product          là đối tượng được tạo ra không nhất thiết phải cùng thuộc một hệ thống phân cấp
+ * Director         xác đinh thứ tự gọi các bước xậy dựng có thể tạo và sửa dụng lại các cấu hình cụ thể của sản phẩm
  * 
- * CarManualBuilder : kể thừa Builder
- * CarBuilder       : kể thừa Builder
- * Director có 3 function nhận 3 đối số là Builder
+ * giải thích mấu
+ * builder là giao diện chứa các phương thức nhưng chưa được định nghĩa
  * 
- * Director mỗi 1 function sẽ xây dựng 1 mẫu Car khác nhau hoặc giống nhau
- * một Director có thể xây dựng các mẫu Car khác nhau hoặc giống nhau tùy vào chức năng của nó
+ * Concrete builder gồm
+ * CarBuilder        * đều kế thừa builder
+ * CarManualBuilder  * 
+ * 
+ * Product gồm
+ * Car     * được tạo ra bởi CarBuilder
+ * Manual  * được tạo ra bởi CarManualBuilder
+ * 
+ * Director * có các phương thức nhận đối số chung là Builder chung và xây dựng chúng
+ * 
  */
 public class Demo {
 	public static void main(String[] args) {

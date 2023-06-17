@@ -12,7 +12,7 @@ public class WindowsButton implements Button {
 
     public void render() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JLabel label = new JLabel("Hello World!");
+        JLabel label = new JLabel("Hello World! Windown 10");
         label.setOpaque(true);
         label.setBackground(new Color(235, 233, 126));
         label.setFont(new Font("Dialog", Font.BOLD, 44));

@@ -4,11 +4,22 @@ package cp3methodfactory;
  * Cung cấp một giao diện để tạo các đối tượng trong một lớp cha, 
  * nhưng cho phép các lớp con thay đổi loại đối tượng sẽ được tạo.
  * 
- * WindowDialog : kế thừa Dialog
- * HtmlDialog   : kế thừa Dialog
+ * mẫu gồm yếu tố :
+ * 1 Creator cũng cấp giao diện cho Factory method, khi được gọi sẽ trả về Product
+ * 2 ConcreteCreator cũng cấp phương thức để tạo ra product, phương thức sẽ thực thị cụ thể ở giao diện này
+ * 3 Product là đồi tượng được tạo ra bởi Factory Method
  * 
- * lớp Dialog tạo ra function createButton nhưng
- * việc thay đổi hành động của createButton nằm ở lớp WindowDialog và HtmlDialog
+ * Creator là:
+ * lớp Dialog là lớp trìu tượng chứa phương thức
+ * 
+ * ConcreteCreator là các lớp sẽ thực thi phương thức để tạo ra Product
+ * lớp WindowDialog
+ * lớp HtmlDialog
+ * 
+ * Product là đối được được tạo ra
+ * lớp giao diện Button
+ * lớp HtmlButton kết thừa Button
+ * lớp WindownButton kết thừa Button
  * 
  */
 public class Demo {
@@ -21,7 +32,7 @@ public class Demo {
 	}
 
     public static void configure() {
-        if (System.getProperty("os.name").equals("Windows 10")) {
+        if (!System.getProperty("os.name").equals("Windows 10")) {
             dialog = new WindowDialog();
         } else {
             dialog = new HtmlDialog();
