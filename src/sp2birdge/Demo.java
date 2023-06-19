@@ -1,20 +1,31 @@
 package sp2birdge;
 
-/*
+/**
  * giải thích :
  * Cho phép bạn chia một lớp lớn hoặc một tập hợp 
  * các lớp có liên quan chặt chẽ thành hai phân cấp 
  * riêng biệt — trừu tượng hóa và triển khai — có thể được phát triển độc lập với nhau
+ * ---------------------------------------------------------------------------*
+ * cấu trúc                                                                   |
+ * Abstraction cung cấp logic điều khiển cấp cao,                             |
+ * 			   dựa vào đối tượng triển khai để thực hiện công việc cấp thấp   |
+ * Implementation khai báo giao diện chung cho tất cả các triển khai cụ thể   |
+ * Concrete Implementations chứa mã dành riêng cho nền tảng                   |
+ * Refined Abstractions cung cấp các biến thể của logic điều khiển            |
+ * ---------------------------------------------------------------------------*
+ * ví dụ code
+ * Abstraction là 
+ * remote
  * 
- * BasicRemote 	  : kế thừa Remote
- * AdvancedRemote : kế thừa BasicRemote
+ * Implementation là 
+ * Device
  * 
- * BasicRemote mở rộng từ Remote
- * AdvancedRemote tiếp tục mở rộng hơn nữa từ BasicRemote
+ * Concrete Implementations là
+ * AdvancedRemote
  * 
- * tạo ra phân cấp:
- * AdvancedRemote -> BasicRemote -> Remote
- * AdvancedRemote kế thừa BasicRemote thì nó cũng kế thừa Remote
+ * Refined Abstractions là 
+ * TV
+ * Radio
  */
 public class Demo {
 	public static void main(String[] args) {

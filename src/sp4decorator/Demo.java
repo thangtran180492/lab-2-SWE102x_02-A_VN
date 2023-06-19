@@ -7,14 +7,27 @@ package sp4decorator;
  * bên trong các đối tượng bao bọc 
  * đặc biệt chứa các hành vi đó.
  * 
- * lớp giao diên
+ * cấu trúc mẫu:
+ * Component khai báo thành phần chung cho cả trình bao bọc và đối tượng bao bọc
+ * Concrete Component là đối tượng được bao bọc, nó xác định hành vi cơ bản có thể được thay đổi
+ * Base Decorator có trường để tham chiếu đối tượng được bao bọc 
+ * 				  loại của trường được khai báo là giao diện thành phần để nó có thể chứa thành phần cụ thể
+ * Concrete Decorators xác định hành vi bổ sung có thể được thêm vào một các linh hoạt
+ * 
+ * áp dụng mã cụ thể
+ * Component là
  * DataSource
  * 
- * DataSourceDecorator  : kế thừa DataSource
- * FileDataSource       : kế thừa DataSource
+ * Concrete Component là
+ * FileDataSource
  * 
- * CompressionDecorator : kế thừa DataSourceDecorator
- * EncryptionDecorator  : kế thừa DataSourceDecorator
+ * Base Decorator là
+ * DataSourceDecorator
+ * 
+ * Concrete Decorators là
+ * CompressionDecorator
+ * EncryptionDecorator
+ * 
  */
 public class Demo {
     public static void main(String[] args) {

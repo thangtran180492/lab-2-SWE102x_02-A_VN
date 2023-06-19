@@ -5,13 +5,11 @@ import java.util.List;
 /*
  * giải thích :
  * Cho phép bạn sao chép các đối tượng hiện có 
- * mà không làm cho mã của bạn phụ thuộc vào các lớp của chúng.
+ * mà không cần ghép nối với các lớp cụ thể của chúng.
  * 
- * lớp trừu tượng
- * Shape : chức năng(equals) của nó sử dụng Object là đối tượng chưa rõ
- * 
- * Circle    : kế thừa Shape
- * Rectangle : kế thừa Shape
+ * kết cấu:
+ * Prototype khai báo các phương thức sao chép, hầu hết các trường hợp là một phương pháp duy nhất
+ * Concrete Prototype thực hiện sao chép, dễ hiêu hơn thì nó kế thừa Prototype
  */
 public class Demo {
     public static void main(String[] args) {
@@ -50,9 +48,9 @@ public class Demo {
         for (int i = 0; i < shapes.size(); i++) {
             if (shapes.get(i) != shapesCopy.get(i)) {
                 System.out.println(i + ": Shapes are different objects (yay!)");
-                // equals sẽ so sáng kiểu instanceof so sánh kiểu đối tượng
+                // equals sẽ so sánh kiểu instanceof so sánh kiểu đối tượng
                 if (shapes.get(i).equals(shapesCopy.get(i))) {
-                    System.out.println(i + ": And they are identical (yay!)");
+                    System.out.println(i + ": And they are identical (yay!) --"+shapes.get(i)+"-- ++" + shapesCopy.get(i)+"++");
                 } else {
                     System.out.println(i + ": But they are not identical (booo!)");
                 }

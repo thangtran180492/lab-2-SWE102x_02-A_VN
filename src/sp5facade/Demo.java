@@ -6,22 +6,26 @@ import java.io.File;
  * giải thích :
  * Cung cấp giao diện đơn giản hóa cho thư viện, 
  * khung hoặc bất kỳ tập hợp lớp phức tạp nào khác.
- * ++
- * mẫu này tạo ra các đối tượng phức tạp liên quan đến nhau,
- * nhưng cấu trúc riêng biệt trong chúng khá đơn giản
- * -----------------------------------------------------------
- * khởi tạo các đối tượng :
- * VideoConversionFacade : các đối tượng đơn giản khác được khởi tạo trong nó
  * 
- * giao diện đơn giản :
- * Codec : hầu như không có gì
+ * cấu trúc:
+ * Facade cung cấp khả năng truy cập vào 1 phần chức năng cụ thể của hế thống con
+ * Additional Facade có thể được tạo để ngăn chặn một Facade với các tính năng không liên quan làm nó phức tạp
+ * Complex Subsystem bao gồm đối tượng khác nhau, nó không nhận thức được sử tồn tại của Facade
+ * 					 chúng hoạt động trong hệ thống và làm việc với nhau
+ * client sử dụng Facade thay vì gọi trực tiếp các đối tượng hệ thống con(Complex Subsystem)
  * 
- * các tập hợp đơn giản
- * AudioMixer : 
- * VideoFile :
- * CodecFactory :
- * OggCompressionCodec :
- * MPEG4CompressionCodec :
+ * áp dụng code 
+ * Facade là
+ * VideoConversionFacade nó có 1 phương thức duy nhất là
+ * 						 convertVideo xử lý sự phức tạp của việc định cấu hình đúng lớp
+ *  
+ * Complex Subsystem là
+ * VideoFile
+ * AudioMixer
+ * BtrateReader
+ * codecFactory
+ * OggCompressionCodec
+ * MPEG4CompressionCodec
  * 
  */
 public class Demo {
