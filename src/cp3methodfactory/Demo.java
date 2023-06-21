@@ -5,8 +5,8 @@ package cp3methodfactory;
  * nhưng cho phép các lớp con thay đổi loại đối tượng sẽ được tạo.
  * 
  * mẫu gồm yếu tố :
- * 1 Creator cũng cấp giao diện cho Factory method, khi được gọi sẽ trả về Product
- * 2 ConcreteCreator cũng cấp phương thức để tạo ra product, phương thức sẽ thực thị cụ thể ở giao diện này
+ * 1 Cretor cũng cấp giao diện cho Factory method, khi được gọi sẽ trả về Product
+ * 2 ConcreteCretor cũng cấp phương thức để tạo ra product, phương thức sẽ thực thị cụ thể ở giao diện này
  * 3 Product là đồi tượng được tạo ra bởi Factory Method
  * 
  * Creator là:

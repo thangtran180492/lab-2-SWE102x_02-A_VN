@@ -12,7 +12,7 @@ package sp4decorator;
  * Concrete Component là đối tượng được bao bọc, nó xác định hành vi cơ bản có thể được thay đổi
  * Base Decorator có trường để tham chiếu đối tượng được bao bọc 
  * 				  loại của trường được khai báo là giao diện thành phần để nó có thể chứa thành phần cụ thể
- * Concrete Decorators xác định hành vi bổ sung có thể được thêm vào một các linh hoạt
+ * Concrete Decorators xác định hành vi bổ sung có thể được thêm vào một cách linh hoạt
  * 
  * áp dụng mã cụ thể
  * Component là

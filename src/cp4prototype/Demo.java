@@ -7,6 +7,8 @@ import java.util.List;
  * Cho phép bạn sao chép các đối tượng hiện có 
  * mà không cần ghép nối với các lớp cụ thể của chúng.
  * 
+ * đặc điểm của prototype là phương thức clone
+ * 
  * kết cấu:
  * Prototype khai báo các phương thức sao chép, hầu hết các trường hợp là một phương pháp duy nhất
  * Concrete Prototype thực hiện sao chép, dễ hiêu hơn thì nó kế thừa Prototype
@@ -41,7 +43,7 @@ public class Demo {
      */
     private static void cloneAndCompare(List<Shape> shapes, List<Shape> shapesCopy) {
         for (Shape shape : shapes) {
-        	// sao chép và sao gọi hàm từ đối tượng(shape) cha của chúng
+        	// sao chép và sao gọi hàm clone từ đối tượng(shape) cha của chúng
             shapesCopy.add(shape.clone());
         }
 
